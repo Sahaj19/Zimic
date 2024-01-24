@@ -43,9 +43,18 @@ body {
     width: 120px;
     border: 2px solid #fff;
     margin: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
 }
 
 
-.flash {
+.gameFlash {
     background-color: #fff;
+}
+
+.userFlash {
+    background-color: green;
 }
