@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.dynamic_text {
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.boxes {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.first_line ,
+.second_line,
+.third_line {
+    display: flex;
+}
+
+.btn {
+    height: 120px;
+    width: 120px;
+    border: 2px solid #fff;
+    margin: 1.5rem;
+}
+
+
+.flash {
+    background-color: #fff;
+}
