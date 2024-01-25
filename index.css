@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -57,4 +58,35 @@ body {
 
 .userFlash {
     background-color: green;
+}
+
+
+/************************ responsiveness CSS layout ***************************/
+@media(max-width:600px) {
+    .dynamic_text {
+        font-size: 1.5rem;
+    }
+
+    .boxes {
+        margin-bottom: 5rem;
+    }
+
+    .btn {
+        width: 80px;
+        height: 80px;
+        margin: 1rem;
+    }
+}
+
+
+@media(max-width:425px) {
+    .dynamic_text {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 60px;
+        height: 60px;
+        margin: 1rem;
+    }
 }

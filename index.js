@@ -33,7 +33,7 @@ function gameButtonFlash() {
 
   let gameNumberChoices = btns[randomNumber].textContent;
   gameSequence.push(gameNumberChoices);
-  //   console.log("Game sequence : ", gameSequence);
+  // console.log("Game sequence : ", gameSequence);
 
   setTimeout(() => {
     btns[randomNumber].classList.remove("gameFlash");
@@ -46,7 +46,7 @@ function userButtonFlash(btn) {
 
   let userNumberChoices = btn.textContent;
   userSequence.push(userNumberChoices);
-  //   console.log("User Sequence : ", userSequence);
+  // console.log("User Sequence : ", userSequence);
 
   setTimeout(() => {
     btn.classList.remove("userFlash");
@@ -56,8 +56,13 @@ function userButtonFlash(btn) {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function userButtonPress() {
   let userSelectedButton = this;
-  //   console.log(userSelectedButton);
-  userButtonFlash(userSelectedButton);
+  // console.log(userSelectedButton);
+  if (started == true) {
+    userButtonFlash(userSelectedButton);
+  } else {
+    dynamicText.innerHTML = "First press Enter to start the game!";
+    return;
+  }
 
   //It will keep the track!!!
   sequenceChecker(userSequence.length - 1);
