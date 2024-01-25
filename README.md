@@ -10,5 +10,5 @@
 - It will Test your recall speed.
 - It will Sharpen your memory with each turn.
 
-### Deployed here : 
+### Deployed here : https://zimic.netlify.app
 
