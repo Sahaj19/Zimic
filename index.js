@@ -1,5 +1,6 @@
 let dynamicText = document.querySelector(".dynamic_text");
 let btns = document.querySelectorAll(".btn");
+let startGameBtn = document.querySelector(".start_game_btn");
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let gameSequence = [];
@@ -9,12 +10,10 @@ let started = false;
 let highestScore = 0;
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-document.addEventListener("keypress", (event) => {
-  if (event.key == "Enter") {
-    if (started == false) {
-      started = true;
-      setTimeout(startGame, 150);
-    }
+startGameBtn.addEventListener("click", () => {
+  if (started == false) {
+    started = true;
+    setTimeout(startGame, 200);
   }
 });
 
@@ -60,7 +59,7 @@ function userButtonPress() {
   if (started == true) {
     userButtonFlash(userSelectedButton);
   } else {
-    dynamicText.innerHTML = "First press Enter to start the game!";
+    dynamicText.innerHTML = "First Click Start Game button to start the game!";
     return;
   }
 
@@ -81,7 +80,7 @@ function sequenceChecker(index) {
     }
   } else {
     // console.log("diferent value");
-    dynamicText.innerHTML = `Your previous highest score : ${highestScore} <br> Game Over! Press Enter to restart. <br> you made it till LEVEL : ${
+    dynamicText.innerHTML = `Your previous highest score : ${highestScore} <br> Game Over! Click the Start Game button to restart. <br> you made it till LEVEL : ${
       gameLevel - 1
     }`;
     started = false;
